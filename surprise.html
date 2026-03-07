@@ -25,29 +25,29 @@
 🎁 Click For Biggest Surprise
 </button>
 
-<!-- Confetti library -->
+<script>
+function showSurprise(){
+  window.location.href = "surprise.html";
+}
+</script>
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
 <script>
 
-function fireConfetti(){
+function fireConfetti() {
+
   confetti({
-    particleCount:200,
-    spread:120,
-    startVelocity:50,
-    origin:{ y:0.6 }
+    particleCount: 200,
+    spread: 120,
+    startVelocity: 50,
+    origin: { y: 0.6 }
   });
-}
-
-window.onload = function(){
-
-  fireConfetti();
-
-  setTimeout(fireConfetti,500);
-  setTimeout(fireConfetti,1000);
-  setTimeout(fireConfetti,1500);
 
 }
+
+/* run when page loads */
+window.onload = fireConfetti;
+
 function goToBigSurprise(){
   window.location.href = "bigsurprise.html";
 }
