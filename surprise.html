@@ -11,12 +11,14 @@
 <p>Some special moments ✨</p>
 
 <div class="gallery">
-  <img src="img1.jpg">
-  <img src="img2.jpeg">
-  <img src="img3.jpeg">
-  <img src="img4.jpg">
-  <img src="img5.jpg">
-  <img src="img6.jpeg">
+  <img src="img1.jpg" onclick="openImage(this)">
+  <img src="img2.jpeg" onclick="openImage(this)">
+  <img src="img3.jpeg" onclick="openImage(this)">
+  <img src="img4.jpg" onclick="openImage(this)">
+  <img src="img5.jpg" onclick="openImage(this)">
+  <img src="img6.jpeg" onclick="openImage(this)">
+  <img src="img6.jpeg" onclick="openImage(this)">
+  <img src="img6.jpeg" onclick="openImage(this)">
 </div>
 
 <br><br>
@@ -52,6 +54,40 @@ function goToBigSurprise(){
   window.location.href = "bigsurprise.html";
 }
 </script>
+<script>
 
+function fireConfetti() {
+
+  confetti({
+    particleCount: 200,
+    spread: 120,
+    startVelocity: 50,
+    origin: { y: 0.6 }
+  });
+
+}
+
+/* run when page loads */
+window.onload = fireConfetti;
+
+function goToBigSurprise(){
+  window.location.href = "bigsurprise.html";
+}
+
+/* ADD THIS PART */
+
+function openImage(img){
+  document.getElementById("imageViewer").style.display="flex";
+  document.getElementById("fullImage").src=img.src;
+}
+
+function closeImage(){
+  document.getElementById("imageViewer").style.display="none";
+}
+
+</script>
 </body>
+<div id="imageViewer" class="viewer" onclick="closeImage()">
+  <img id="fullImage">
+</div>
 </html>
