@@ -19,6 +19,11 @@
   <img src="img6.jpeg">
 </div>
 
+<br><br>
+
+<button class="surprise-btn" onclick="goToBigSurprise()">
+🎁 Click For Biggest Surprise
+</button>
 
 <!-- Confetti library -->
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
@@ -43,7 +48,9 @@ window.onload = function(){
   setTimeout(fireConfetti,1500);
 
 }
-
+function goToBigSurprise(){
+  window.location.href = "bigsurprise.html";
+}
 </script>
 
 </body>

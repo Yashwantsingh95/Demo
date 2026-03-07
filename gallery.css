@@ -30,3 +30,18 @@ h1{
   transform:scale(1.1);
 }
 
+.surprise-btn{
+  padding:14px 30px;
+  font-size:18px;
+  border:none;
+  border-radius:30px;
+  background:linear-gradient(45deg,#ff416c,#ff4b2b);
+  color:white;
+  cursor:pointer;
+  transition:0.3s;
+  box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+.surprise-btn:hover{
+  transform:scale(1.1);
+}
