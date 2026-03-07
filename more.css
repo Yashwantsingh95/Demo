@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad0c4, #ffdde1);
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+/* Main Scene */
+.scene {
+  text-align: center;
+  padding-top: 80px;
+}
+
+/* Birthday Title */
+.Happy_birthday {
+  font-size: 3.5em;
+  color: #c2185b;
+  animation: glow 2s infinite alternate;
+}
+
+/* Name Style */
+#name {
+  color: rgb(255, 51, 0);
+  text-shadow: 0 0 15px white;
+  animation: glow 2s infinite alternate;
+}
+
+/* Glow Animation */
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px white, 0 0 20px pink;
+  }
+  to {
+    text-shadow: 0 0 25px yellow, 0 0 40px orange;
+  }
+}
+
+/* Cake */
+.cake {
+  font-size: 90px;
+  margin-top: 40px;
+  animation: bounce 1.5s infinite;
+}
+
+/* Cake Bounce */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-25px);
+  }
+}
+
+/* Balloons */
+.balloon {
+  position: absolute;
+  bottom: -120px;
+  font-size: 50px;
+  animation: float 7s linear infinite;
+}
+
+.b1 {
+  left: 15%;
+  animation-delay: 0s;
+}
+
+.b2 {
+  left: 45%;
+  animation-delay: 2s;
+}
+
+.b3 {
+  left: 75%;
+  animation-delay: 4s;
+}
+
+/* Balloon Float Animation */
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-130vh) rotate(10deg);
+  }
+}
