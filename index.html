@@ -7,16 +7,60 @@
 <body>
 
 <div class="scene">
+
   <h1 class="Happy_birthday">
-    Happy Birthday <span id="name">yashwant</span> 🎉
+    Happy Birthday <span id="name">Tanisha </span> 🎉
   </h1>
+
+  <p class="wish">
+    Wishing you a day filled with happiness, laughter and lots of cake! 🎂
+  </p>
+
+  <p class="wish">
+    May all your dreams come true and your year be full of success and joy. ✨
+  </p>
+
+  <p class="wish">
+    Enjoy your special day and make amazing memories! 🎁
+  </p>
 
   <div class="cake">🎂</div>
 
   <div class="balloon b1">🎈</div>
   <div class="balloon b2">🎈</div>
   <div class="balloon b3">🎈</div>
+
+  <br><br>
+
+  <button onclick="showSurprise()" class="btn">
+    🎁 Click Me For Surprise
+  </button>
+
 </div>
 
+<script>
+function showSurprise(){
+  window.location.href = "surprise.html";
+}
+</script>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+<script>
+
+function fireConfetti() {
+
+  confetti({
+    particleCount: 200,
+    spread: 120,
+    startVelocity: 50,
+    origin: { y: 0.6 }
+  });
+
+}
+
+/* run when page loads */
+window.onload = fireConfetti;
+
+</script>
 </body>
 </html>
